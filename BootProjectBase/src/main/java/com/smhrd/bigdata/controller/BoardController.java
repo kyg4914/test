@@ -22,7 +22,7 @@ import com.smhrd.bigdata.service.BoardService;
 
 @Controller
 public class BoardController {
-
+	
 	@Autowired
 	private BoardService service;
 
@@ -32,7 +32,7 @@ public class BoardController {
 		System.out.println(b.getTitle() + "," + b.getContent() + "," + b.getWriter());
 		System.out.println(file.getOriginalFilename());
 		System.out.println(UUID.randomUUID().toString());
-
+		System.out.println("!");
 		String newFileName = UUID.randomUUID().toString() + file.getOriginalFilename();
 		// 이미지 file -> 저장(지정된 경로에)
 		try {
