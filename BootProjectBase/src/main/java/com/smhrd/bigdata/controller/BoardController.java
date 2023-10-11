@@ -23,12 +23,15 @@ import com.smhrd.bigdata.service.BoardService;
 @Controller
 public class BoardController {
 	
+	
+	
 	@Autowired
 	private BoardService service;
 
 	// @RequestPart : multipart/form-data 에 특화된 어노테이션
 	@PostMapping("/board/write")
 	public String write(Board b, @RequestPart("photo") MultipartFile file) {
+		System.out.println("test");
 		System.out.println(b.getTitle() + "," + b.getContent() + "," + b.getWriter());
 		System.out.println(file.getOriginalFilename());
 		System.out.println(UUID.randomUUID().toString());
